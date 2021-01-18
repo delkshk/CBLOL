@@ -1,4 +1,15 @@
+:root{
+    --bg_card : #1f1f1f;
+    --bs_card: 0 0 6px 2px black;
+    --br_card: 10px;
+}
+
 body{
     background-color: #151515!important;
     color: white!important;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0!important;
 }

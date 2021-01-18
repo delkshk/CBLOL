@@ -2,9 +2,9 @@
   display: flex;
   align-items: center;
   margin: 1.5em 0px;
-  box-shadow: 0 0 6px 2px black;
-  background: #1f1f1f;
-  border-radius: 10px;
+  box-shadow: var(--bs_card);
+  background: var(--bg_card);
+  border-radius:var(--br_card);
   overflow: hidden;
   transition: 0.2s;
   &:hover {

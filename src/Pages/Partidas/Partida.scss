@@ -1,0 +1,17 @@
+li.partida_card {
+    box-shadow: var(--bs_card);
+    background: var(--bg_card);
+    border-radius:var(--br_card);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 2rem 0;
+    text-align: center;
+    margin: 2rem 0;
+    img {
+        height: 40px;
+        margin: 2rem;
+    }
+
+}
