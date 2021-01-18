@@ -21,7 +21,7 @@ const Partidas = () => {
       settorneio(JSON.parse(datatorneio));
       console.log("torneio storage", JSON.parse(datatorneio));
     }
-  }, []);
+  }, [configs]);
 
   const DataPartida = (dataParam) => {
     const dt = new Date(dataParam);
@@ -31,9 +31,9 @@ const Partidas = () => {
     const today = new Date();
     const dt = new Date(dataParam);
     return (
-      dt.getDate() == today.getDate() &&
-      dt.getMonth() == today.getMonth() &&
-      dt.getFullYear() == today.getFullYear()
+      dt.getDate() === today.getDate() &&
+      dt.getMonth() === today.getMonth() &&
+      dt.getFullYear() === today.getFullYear()
     );
   };
   return (

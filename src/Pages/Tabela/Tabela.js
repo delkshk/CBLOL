@@ -24,7 +24,7 @@ const Tabela = () => {
       setstading(JSON.parse(dataStanding));
       console.log("GAMES storage", JSON.parse(dataStanding));
     }
-  }, []);
+  }, [configs]);
 
   return (
     <ul>
