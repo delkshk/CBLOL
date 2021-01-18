@@ -1,0 +1,22 @@
+.team {
+    display: flex;
+    align-items: center;
+    margin: 1.5em 0px;
+    img{
+        max-width: 105px;
+    }
+    .info{
+        flex-direction: column;
+        text-align: left;
+        align-items: baseline;
+        margin-left: 1em;
+    }
+    // &_name,&_acro{
+    //     margin: 0 10px;
+    // }
+    &_stats{
+        &__wins{
+            margin-right:10px ;
+        }
+    }
+}
