@@ -1,22 +1,89 @@
 .team {
+  display: flex;
+  align-items: center;
+  margin: 1.5em 0px;
+  box-shadow: 0 0 6px 2px black;
+  background: #1f1f1f;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.2s;
+  &:hover {
+    * {
+      opacity: 1 !important;
+    }
+  }
+  &:nth-child(n + 4):nth-child(-n + 11) {
+    height: 40px;
+    img {
+      display: none;
+    }
+
+    .team {
+      &_info {
+      }
+    }
+  }
+  img {
+    width: 60px;
+    padding: 6px;
+    height: 60px;
+    background-color: white;
+    &.RCC {
+      background: #b70000;
+    }
+    &.LOUD {
+      background: #000;
+    }
+    &.FLA {
+      background: #b70000;
+    }
+    &.FUR {
+      background: #ffffff;
+    }
+    &.CRZ {
+    }
+    &.RNS {
+    }
+    &.PNG {
+    }
+    &.VRX {
+    }
+    &.KBM {
+    }
+  }
+  &_info {
     display: flex;
-    align-items: center;
-    margin: 1.5em 0px;
-    img{
-        max-width: 105px;
-    }
-    .info{
-        flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+    opacity: 0.5;
+    .team {
+      &_pos {
+        width: 10%;
+        text-align: center;
+      }
+      &_name {
+        width: 60%;
         text-align: left;
-        align-items: baseline;
-        margin-left: 1em;
+        font-weight: bold;
+      }
+      &_stats {
+        width: 30%;
+        text-align: right;
+        padding-right: 10px;
+      }
     }
-    // &_name,&_acro{
-    //     margin: 0 10px;
-    // }
-    &_stats{
-        &__wins{
-            margin-right:10px ;
-        }
+  }
+  // &_name,&_acro{
+  //     margin: 0 10px;
+  // }
+  &_pos {
+    font-weight: bold;
+    font-size: 18px;
+    opacity: 0.5;
+  }
+  &_stats {
+    &__wins {
+      margin-right: 10px;
     }
+  }
 }
