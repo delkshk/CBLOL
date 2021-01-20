@@ -42,10 +42,10 @@ const Partidas = () => {
   }, []);
   return (
     <div>
-      <div>
-        <button onClick={()=>{if(rodada > 1 ){setrodada(rodada-1);setloading(true);setTimeout(() => {setloading(false);}, 250);}}}>Prev</button>
+      <div className="nav_rodada">
+        <button onClick={()=>{if(rodada > 1 ){setrodada(rodada-1);setloading(true);setTimeout(() => {setloading(false);}, 250);}}}>{"<-"}</button>
         <span>{rodada}</span>
-        <button onClick={()=>{if(rodada < 9 ){setrodada(rodada+1);setloading(true);setTimeout(() => {setloading(false);}, 250);}}}>Next</button>
+        <button onClick={()=>{if(rodada < 9 ){setrodada(rodada+1);setloading(true);setTimeout(() => {setloading(false);}, 250);}}}>{"->"}</button>
       </div>
       <ul>
         {torneio &&

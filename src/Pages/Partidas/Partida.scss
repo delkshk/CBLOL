@@ -1,21 +1,30 @@
 li.partida_card {
-    box-shadow: var(--bs_card);
-    background: var(--bg_card);
-    border-radius:var(--br_card);
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    padding: 2rem 0;
-    text-align: center;
-    margin: 2rem 0;
-    img {
-        height: 40px;
-        margin: 2rem;
-    }
-
+  box-shadow: var(--bs_card);
+  background: var(--bg_card);
+  border-radius: var(--br_card);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 2rem 0;
+  text-align: center;
+  margin: 2rem 0;
+  img {
+    height: 40px;
+    margin: 2rem;
+  }
 }
 
 .loading_card {
-    margin: 2rem 0;
+  margin: 2rem 0;
+}
+
+.nav_rodada {
+  margin-top: 2rem;
+  button{
+    border: 0;
+    background: 0;
+    color: #fff;
+    padding: 10px;
+  }
 }
