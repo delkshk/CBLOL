@@ -1,0 +1,30 @@
+.loading_card {
+  position: relative;
+  width: 100%;
+  // height: 250px;
+  background: var(--bg_card);
+  box-shadow: var(--bs_card);
+  overflow: hidden;
+  border-radius: var(--br_card);
+  margin-bottom: 2rem;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, #fafafa00 0%, #101010c2 60%, #fafafa00 100%);
+    animation: animation 2s ease-in-out infinite;
+  }
+}
+
+@keyframes animation {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 100%;
+  }
+}

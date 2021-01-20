@@ -86,39 +86,41 @@ const PartidaCard = (props) => {
     }
   };
   const teams = getTeams(partida.slug);
-  return (
-    <li
-      className="partida_card"
-      data-isToday={isToday(partida.scheduled_at)}
-      data-rodada={getWeek(partida.name)}
-      data-teamHome={teams[0]}
-      data-teamAway={teams[1]}
-    >
-      <p className="partida_card__nome">{partida.name}</p>
-      <p className="partida_card__data">{DataPartida(partida.scheduled_at)}</p>
-      <div className="partida_card__img_container">
-        <img src={getTeamsImage(teams[0])} alt={teams[0]} />
-        <span>VS</span>
-        <img src={getTeamsImage(teams[1])} alt={teams[1]} />
-      </div>
 
-      <p className="partida_card__status">
-        {partida.status === "finished" ? "Finalizada" : ""}
-        {partida.status === "not_started" && !isToday(partida.scheduled_at)
-          ? "Em Breve"
-          : ""}
-        {partida.status === "not_started" && isToday(partida.scheduled_at)
-          ? "A Seguir"
-          : ""}
-        {partida.status === "running" ? "Partida em Andamento" : ""}
-      </p>
-      {isToday(partida.scheduled_at) ? (
-        <p className="partida_card__today">Hoje? </p>
-      ) : (
-        ""
-      )}
-    </li>
-  );
+    return (
+      <li
+        className="partida_card"
+        istoday={isToday(partida.scheduled_at).toString()}
+        rodada={getWeek(partida.name)}
+        teamhome={teams[0]}
+        teamaway={teams[1]}
+      >
+        <p className="partida_card__nome">{partida.name}</p>
+        <p className="partida_card__data">{DataPartida(partida.scheduled_at)}</p>
+        <div className="partida_card__img_container">
+          <img src={getTeamsImage(teams[0])} alt={teams[0]} />
+          <span>VS</span>
+          <img src={getTeamsImage(teams[1])} alt={teams[1]} />
+        </div>
+  
+        <p className="partida_card__status">
+          {partida.status === "finished" ? "Finalizada" : ""}
+          {partida.status === "not_started" && !isToday(partida.scheduled_at)
+            ? "Em Breve"
+            : ""}
+          {partida.status === "not_started" && isToday(partida.scheduled_at)
+            ? "A Seguir"
+            : ""}
+          {partida.status === "running" ? "Partida em Andamento" : ""}
+        </p>
+        {isToday(partida.scheduled_at) ? (
+          <p className="partida_card__today">Hoje? </p>
+        ) : (
+          ""
+        )}
+      </li>
+    );
+
 };
 
 export default PartidaCard;
