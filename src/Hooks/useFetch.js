@@ -1,7 +1,7 @@
 const useFetch = (endpoint) => {
   var url = "https://cblolapi.herokuapp.com/";
   if (endpoint === "tournaments") {
-    url = "https://api.pandascore.co/leagues/302";
+    url = url + "rodadas";
   } else {
     url = url + "tabela";
   }
