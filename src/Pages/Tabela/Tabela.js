@@ -35,8 +35,18 @@ const Tabela = () => {
     GetTabela();
   }, []);
 
+  const loadingPlaceholder = () => {
+    return(
+      <div>
+        <LoadingCard height="60px"/>
+        <LoadingCard height="60px"/>
+        <LoadingCard height="60px"/>
+      </div>
+    )
+  };
   return (
     <ul>
+      {!stading ? loadingPlaceholder() : ""}  
       {stading &&
         stading.map((standing) => {
           if (loading) {
