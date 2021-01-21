@@ -16,7 +16,7 @@ const Tabela = () => {
             JSON.stringify(response.data)
           );
           setstading(response.data);
-          // console.log("Request", response.data);
+          // console.log("Request Tabela", response.data);
           setloading(false);
         })
         .catch(function (error) {
@@ -25,7 +25,7 @@ const Tabela = () => {
     } else {
       const dataStanding = window.sessionStorage.getItem("standing");
       setstading(JSON.parse(dataStanding));
-      // console.log("GAMES storage", JSON.parse(dataStanding));
+      // console.log("storage Tabela", JSON.parse(dataStanding));
       setTimeout(() => {
         setloading(false);
       }, 1000);

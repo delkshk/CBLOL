@@ -19,7 +19,7 @@ const Partidas = () => {
             JSON.stringify(response.data)
           );
           settorneio(response.data);
-          // console.log("torneio", response.data);
+          // console.log("request torneio", response.data);
           setloading(false);
         })
         .catch(function (error) {
@@ -28,7 +28,7 @@ const Partidas = () => {
     } else {
       const datatorneio = window.sessionStorage.getItem("torneio");
       settorneio(JSON.parse(datatorneio));
-      // console.log("torneio storage", JSON.parse(datatorneio));
+      console.log("storage torneio", JSON.parse(datatorneio));
       setTimeout(() => {
         setloading(false);
       }, 1000);

@@ -6,6 +6,17 @@ const PartidaCard = (props) => {
     const dt = new Date(dataParam);
     return dt.getDate() + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear();
   };
+
+  const HoraPartida = (dataParam) => {
+    const dt = new Date(dataParam); 
+    const AddZero= (i) => {
+      if (i < 10) {
+        i = "0" + i;
+      }
+      return i;
+    }
+    return AddZero(dt.getHours()) + ":" + AddZero(dt.getMinutes());  
+  };
   const isToday = (dataParam) => {
     const today = new Date();
     const dt = new Date(dataParam);
@@ -97,6 +108,7 @@ const PartidaCard = (props) => {
       >
         <p className="partida_card__nome">{partida.name}</p>
         <p className="partida_card__data">{DataPartida(partida.scheduled_at)}</p>
+        <p>{HoraPartida(partida.scheduled_at)}</p>
         <div className="partida_card__img_container">
           <img src={getTeamsImage(teams[0])} alt={teams[0]} />
           <span>VS</span>
@@ -113,11 +125,6 @@ const PartidaCard = (props) => {
             : ""}
           {partida.status === "running" ? "Partida em Andamento" : ""}
         </p>
-        {isToday(partida.scheduled_at) ? (
-          <p className="partida_card__today">Hoje? </p>
-        ) : (
-          ""
-        )}
       </li>
     );
 
